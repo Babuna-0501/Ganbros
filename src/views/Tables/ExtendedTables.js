@@ -25,9 +25,9 @@ import CardHeader from "components/Card/CardHeader.js";
 
 import styles from "assets/jss/material-dashboard-pro-react/views/extendedTablesStyle.js";
 
-import product1 from "assets/img/product1.jpg";
-import product2 from "assets/img/product2.jpg";
-import product3 from "assets/img/product3.jpg";
+import product1 from "assets/img/or1.jpeg";
+import product2 from "assets/img/sandal1.jpeg";
+import product3 from "assets/img/n-taviur1.jpeg";
 
 const useStyles = makeStyles(styles);
 
@@ -96,208 +96,15 @@ export default function ExtendedTables() {
             <CardIcon color="rose">
               <Assignment />
             </CardIcon>
-            <h4 className={classes.cardIconTitle}>Simple Table</h4>
-          </CardHeader>
-          <CardBody>
-            <Table
-              tableHead={[
-                "#",
-                "Name",
-                "Job Position",
-                "Since",
-                "Salary",
-                "Actions"
-              ]}
-              tableData={[
-                [
-                  "1",
-                  "Andrew Mike",
-                  "Develop",
-                  "2013",
-                  "€ 99,225",
-                  fillButtons
-                ],
-                ["2", "John Doe", "Design", "2012", "€ 89,241", roundButtons],
-                ["3", "Alex Mike", "Design", "2010", "€ 92,144", simpleButtons],
-                [
-                  "4",
-                  "Mike Monday",
-                  "Marketing",
-                  "2013",
-                  "€ 49,990",
-                  roundButtons
-                ],
-                [
-                  "5",
-                  "Paul Dickens",
-                  "Communication",
-                  "2015",
-                  "€ 69,201",
-                  fillButtons
-                ]
-              ]}
-              customCellClasses={[classes.center, classes.right, classes.right]}
-              customClassesForCells={[0, 4, 5]}
-              customHeadCellClasses={[
-                classes.center,
-                classes.right,
-                classes.right
-              ]}
-              customHeadClassesForCells={[0, 4, 5]}
-            />
-          </CardBody>
-        </Card>
-      </GridItem>
-      <GridItem xs={12}>
-        <Card>
-          <CardHeader color="rose" icon>
-            <CardIcon color="rose">
-              <Assignment />
-            </CardIcon>
-            <h4 className={classes.cardIconTitle}>Striped Table</h4>
-          </CardHeader>
-          <CardBody>
-            <Table
-              striped
-              tableHead={[
-                "#",
-                "",
-                "Product Name",
-                "Type",
-                "Qty",
-                "Price",
-                "Amount"
-              ]}
-              tableData={[
-                [
-                  "1",
-                  <Checkbox
-                    key="key"
-                    className={classes.positionAbsolute}
-                    tabIndex={-1}
-                    onClick={() => handleToggle(1)}
-                    checkedIcon={<Check className={classes.checkedIcon} />}
-                    icon={<Check className={classes.uncheckedIcon} />}
-                    classes={{
-                      checked: classes.checked,
-                      root: classes.checkRoot
-                    }}
-                  />,
-                  "Moleskine Agenda",
-                  "Office",
-                  "25",
-                  "€ 49",
-                  "€ 1,225"
-                ],
-                [
-                  "2",
-                  <Checkbox
-                    key="key"
-                    className={classes.positionAbsolute}
-                    tabIndex={-1}
-                    onClick={() => handleToggle(2)}
-                    checkedIcon={<Check className={classes.checkedIcon} />}
-                    icon={<Check className={classes.uncheckedIcon} />}
-                    classes={{
-                      checked: classes.checked,
-                      root: classes.checkRoot
-                    }}
-                  />,
-                  "Stabilo Pen",
-                  "Office",
-                  "30",
-                  "€ 10",
-                  "€ 300"
-                ],
-                [
-                  "3",
-                  <Checkbox
-                    key="key"
-                    className={classes.positionAbsolute}
-                    tabIndex={-1}
-                    onClick={() => handleToggle(3)}
-                    checkedIcon={<Check className={classes.checkedIcon} />}
-                    icon={<Check className={classes.uncheckedIcon} />}
-                    classes={{
-                      checked: classes.checked,
-                      root: classes.checkRoot
-                    }}
-                  />,
-                  "A4 Paper Pack",
-                  "Office",
-                  "50",
-                  "€ 10.99",
-                  "€ 109"
-                ],
-                [
-                  "4",
-                  <Checkbox
-                    key="key"
-                    className={classes.positionAbsolute}
-                    tabIndex={-1}
-                    onClick={() => handleToggle(4)}
-                    checkedIcon={<Check className={classes.checkedIcon} />}
-                    icon={<Check className={classes.uncheckedIcon} />}
-                    classes={{
-                      checked: classes.checked,
-                      root: classes.checkRoot
-                    }}
-                  />,
-                  "Apple iPad",
-                  "Communication",
-                  "10",
-                  "€ 499.00",
-                  "€ 4,990"
-                ],
-                [
-                  "5",
-                  <Checkbox
-                    key="key"
-                    className={classes.positionAbsolute}
-                    tabIndex={-1}
-                    onClick={() => handleToggle(5)}
-                    checkedIcon={<Check className={classes.checkedIcon} />}
-                    icon={<Check className={classes.uncheckedIcon} />}
-                    classes={{
-                      checked: classes.checked,
-                      root: classes.checkRoot
-                    }}
-                  />,
-                  "Apple iPhone",
-                  "Communication",
-                  "10",
-                  "€ 599.00",
-                  "€ 5,999"
-                ],
-                { total: true, colspan: "5", amount: "€12,999" }
-              ]}
-              customCellClasses={[classes.center, classes.right, classes.right]}
-              customClassesForCells={[0, 5, 6]}
-              customHeadCellClasses={[
-                classes.center,
-                classes.right,
-                classes.right
-              ]}
-              customHeadClassesForCells={[0, 5, 6]}
-            />
-          </CardBody>
-        </Card>
-      </GridItem>
-      <GridItem xs={12}>
-        <Card>
-          <CardHeader color="rose" icon>
-            <CardIcon color="rose">
-              <Assignment />
-            </CardIcon>
-            <h4 className={classes.cardIconTitle}>Shopping Cart Table</h4>
+            <h4 className={classes.cardIconTitle}>Бүтээгдэхүүний захиалга</h4>
           </CardHeader>
           <CardBody>
             <Table
               tableHead={[
                 "",
                 "PRODUCT",
-                "COLOR",
-                "SIZE",
+                "BRAND",
+                "Desc",
                 "PRICE",
                 "QTY",
                 "AMOUNT",
@@ -310,41 +117,22 @@ export default function ExtendedTables() {
                   </div>,
                   <span key="key">
                     <a href="#jacket" className={classes.tdNameAnchor}>
-                      Spring Jacket
+                     GAME
                     </a>
                     <br />
-                    <small className={classes.tdNameSmall}>
-                      by Dolce&amp;Gabbana
-                    </small>
                   </span>,
-                  "Red",
-                  "M",
+                  "Alberta",
+                  "Тансаг байдал, тав тух бол Alberta брэндийн Game загварын орны онцлог шинж чанар. Орны толгой хэсэг нь бусад загвараас харьцангуй өндөр бөгөөд тав тухтай, тааламжтай мэдрэмж төрүүлнэ.",
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 549
+                    <small className={classes.tdNumberSmall}>₮</small> 3.500.000
                   </span>,
                   <span key="key">
                     1{` `}
                     <div className={classes.buttonGroup}>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.firstButton}
-                      >
-                        <Remove className={classes.icon} />
-                      </Button>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.lastButton}
-                      >
-                        <Add className={classes.icon} />
-                      </Button>
                     </div>
                   </span>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 549
+                    <small className={classes.tdNumberSmall}>₮</small> 3.500.000
                   </span>,
                   <Button simple className={classes.actionButton} key="key">
                     <Close className={classes.icon} />
@@ -356,39 +144,22 @@ export default function ExtendedTables() {
                   </div>,
                   <span key="key">
                     <a href="#jacket" className={classes.tdNameAnchor}>
-                      Short Pants{" "}
+                      SAMO{" "}
                     </a>
                     <br />
-                    <small className={classes.tdNameSmall}>by Pucci</small>
                   </span>,
-                  "Purple",
-                  "M",
+                  "Poltrona Frau Style & Design Centre",
+                  "Сандлын түшлэгийг сонгодог загварын хуниас гарган эмжиж, Pelle Frau нэрийн цэвэр арьсаар бүржээ. Суудлын хэсгийг боловсруулсан хус модон хүрээн дээр нарийн аргаар суурилуулсан тул арьс, мод хоёр өөр хоорондоо төгс хоршжээ.",
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 499
+                    <small className={classes.tdNumberSmall}>₮</small> 1.200.000
                   </span>,
                   <span key="key">
                     2{` `}
                     <div className={classes.buttonGroup}>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.firstButton}
-                      >
-                        <Remove className={classes.icon} />
-                      </Button>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.lastButton}
-                      >
-                        <Add className={classes.icon} />
-                      </Button>
                     </div>
                   </span>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 998
+                    <small className={classes.tdNumberSmall}>₮</small> 2.400.000
                   </span>,
                   <Button simple className={classes.actionButton} key="key">
                     <Close className={classes.icon} />
@@ -399,40 +170,23 @@ export default function ExtendedTables() {
                     <img src={product3} alt="..." className={classes.img} />
                   </div>,
                   <span key="key">
-                    <a href="#jacket" className={classes.tdNameAnchor}>
-                      Pencil Skirt
+                    <a href="#LLOYD" className={classes.tdNameAnchor}>
+                      LLOYD
                     </a>
                     <br />
-                    <small className={classes.tdNameSmall}>by Valentino</small>
                   </span>,
-                  "White",
-                  "XL",
+                  "Poltrona Frau - Jean-Marie Massaud",
+                  "Шүүгээ, номын тавиурын цогц систем Lloyd загварыг дизайнер Жан-Мари Массо хувирч өөрчлөгдөх боломжтой бүтэцтэйгээр урлажээ. Өргөн нь 225-280 см, өндөр нь 46-188 см, гүн нь 42.5 см гэхчлэн хувилбартай.",
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 799
+                    <small className={classes.tdNumberSmall}>₮</small> 2.100.000
                   </span>,
                   <span key="key">
                     1{` `}
                     <div className={classes.buttonGroup}>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.firstButton}
-                      >
-                        <Remove className={classes.icon} />
-                      </Button>
-                      <Button
-                        color="info"
-                        size="sm"
-                        round
-                        className={classes.lastButton}
-                      >
-                        <Add className={classes.icon} />
-                      </Button>
                     </div>
                   </span>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>€</small> 799
+                    <small className={classes.tdNumberSmall}>₮</small> 2.100.000
                   </span>,
                   <Button simple className={classes.actionButton} key="key">
                     <Close className={classes.icon} />
@@ -443,18 +197,18 @@ export default function ExtendedTables() {
                   colspan: "5",
                   amount: (
                     <span key="key">
-                      <small>€</small>2,346
+                      <small>₮</small>7.000.000
                     </span>
                   )
                 },
                 {
                   purchase: true,
-                  colspan: "6",
+                  colspan: "4",
                   col: {
-                    colspan: 2,
+                    colspan: 6,
                     text: (
                       <Button color="info" round>
-                        Complete Purchase{" "}
+                        Зөвшөөрөх{" "}
                         <KeyboardArrowRight className={classes.icon} />
                       </Button>
                     )

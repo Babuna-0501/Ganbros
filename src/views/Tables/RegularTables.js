@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom"
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -17,6 +18,8 @@ import Status from "components/Status/Status";
 import { cardTitle } from "assets/jss/material-dashboard-pro-react.js";
 import styles from "assets/jss/material-dashboard-pro-react/components/buttonStyle.js";
 
+
+
 const useStyles = makeStyles(styles);
 const sstyles = {
   customCardContentClass: {
@@ -29,8 +32,13 @@ const sstyles = {
     marginBottom: "0px"
   }
 };
+
 export default function RegularTables() {
   const classes = useStyles();
+  const history = useHistory();
+  const ordersPage = () => {
+      history.push("/admin/orders")
+  }
   return (
     <GridContainer>
       <GridItem xs={12}>
@@ -46,22 +54,26 @@ export default function RegularTables() {
               tableHeaderColor="primary"
               tableHead={["Name", "Email", "Утас"]}
               tableData={[
-                ["Батдорж", "batdorj@mail.com", "+976-99999999",  <Button color="#eee" className={classes.marginRight}>
+                ["Батдорж", "batdorj@mail.com", "+976-99999999",  
+                  <Button on color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                Захиалга харах 
+                </Button>
+                  ],
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                  
                 Захиалга харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight}>
+         
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
                 Захиалга харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight}>
+                ["Батдорж", "batdorj@mail.com", "+976-99999999",<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
                 Захиалга харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999",<Button color="#eee" className={classes.marginRight}>
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" , <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
                 Захиалга харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" , <Button color="#eee" className={classes.marginRight}>
-                Захиалга харах
-              </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999", <Button color="#eee" className={classes.marginRight}>
+                ["Батдорж", "batdorj@mail.com", "+976-99999999", <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
                 Захиалга харах
               </Button>]
               ]}

@@ -299,25 +299,25 @@ const events = [
     allDay: true,
     color: "azure"
   },
-  {
-    title: "Birthday Party",
-    start: new Date(y, m, d + 1, 19, 0),
-    end: new Date(y, m, d + 1, 22, 30),
-    allDay: false,
-    color: "azure"
-  },
-  {
-    title: "Click for Creative Tim",
-    start: new Date(y, m, 21),
-    end: new Date(y, m, 22),
-    color: "orange"
-  },
-  {
-    title: "Click for Google",
-    start: new Date(y, m, 21),
-    end: new Date(y, m, 22),
-    color: "rose"
-  }
+  // {
+  //   title: "Birthday Party",
+  //   start: new Date(y, m, d + 1, 19, 0),
+  //   end: new Date(y, m, d + 1, 22, 30),
+  //   allDay: false,
+  //   color: "azure"
+  // },
+  // {
+  //   title: "Click for Creative Tim",
+  //   start: new Date(y, m, 21),
+  //   end: new Date(y, m, 22),
+  //   color: "orange"
+  // },
+  // {
+  //   title: "Click for Google",
+  //   start: new Date(y, m, 21),
+  //   end: new Date(y, m, 22),
+  //   color: "rose"
+  // }
 ];
 
 // ##############################

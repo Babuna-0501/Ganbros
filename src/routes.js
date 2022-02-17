@@ -292,15 +292,15 @@ var dashRoutes = [
         component: RegularTables,
         layout: "/admin"
       },
-      // {
-      //   path: "/extended-tables",
-      //   name: "Extended Tables",
-      //   rtlName: "جداول ممتدة",
-      //   mini: "ET",
-      //   rtlMini: "هور",
-      //   component: ExtendedTables,
-      //   layout: "/admin"
-      // },
+      {
+        path: "/orders",
+        name: "",
+        rtlName: "جداول ممتدة",
+        mini: "",
+        // rtlMini: "هور",
+        component: ExtendedTables,
+        layout: "/admin"
+      },
       // {
       //   path: "/react-tables",
       //   name: "React Tables",
@@ -364,13 +364,13 @@ var dashRoutes = [
   //   component: Charts,
   //   layout: "/admin"
   // },
-  // {
-  //   path: "/calendar",
-  //   name: "Calendar",
-  //   rtlName: "التقويم",
-  //   icon: DateRange,
-  //   component: Calendar,
-  //   layout: "/admin"
-  // }
+  {
+    path: "/calendar",
+    name: "Calendar",
+    rtlName: "التقويم",
+    icon: DateRange,
+    component: Calendar,
+    layout: "/admin"
+  }
 ];
 export default dashRoutes;

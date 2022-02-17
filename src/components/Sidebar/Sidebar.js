@@ -412,13 +412,6 @@ class Sidebar extends React.Component {
     var brand = (
       <div className={logoClasses} style={{display:"flex",alignItems:"center"}}>
         {/* <a
-          href="https://www.bowsys.mn"
-          target="_blank"
-          className={logoMini}
-        >
-         <GiMagicSwirl size={25} style={{color:"yellow"}}/>
-        </a> */}
-        {/* <a
           href="https://www.creative-tim.com?ref=mdpr-sidebar"
           target="_blank"
           className={logoNormal}

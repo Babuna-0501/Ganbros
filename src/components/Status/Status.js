@@ -80,16 +80,7 @@ function Status() {
           }}
           value="4"
         >
-          Амжиллтай хүргэгдсэн
-        </MenuItem>
-        <MenuItem
-          classes={{
-            root: classes.selectMenuItem,
-            selected: classes.selectMenuItemSelected
-          }}
-          value="4"
-        >
-         ....
+          Амжилттай хүргэгдсэн
         </MenuItem>
       </Select>
     </FormControl>

@@ -244,13 +244,41 @@ render() {
         <form onSubmit={this.handleSubmit}>
             <h3> Барааны нэр </h3><br/>
             <input type="text" onChange={this.handleTitleChange} name="title" value={this.state.title} /><br/><br/>
-            <input type="radio"  onChange={this.handleRadioChange} name="medee" value="TRUE" />Special
-            <input type="radio" onChange={this.handleRadioChange}  name="medee" value="FALSE" />Ordinary<br/><br/>
-            <select name="cate" onChange={this.handleCategoryChange} form="category" >
-                <option value='{"name":"Ширээ", "number":"0"}'>Ширээ</option>
-                <option value='{"name":"Сандал", "number":1}'>Сандал</option>
-                <option value='{"name":"Тавиур", "number":-}'>Тавиур</option>
-           </select>
+            <input type="radio"  onChange={this.handleRadioChange} name="m" value="TRUE" />Бэлэн
+            <input type="radio" onChange={this.handleRadioChange}  name="m" value="FALSE" />Захиалга<br/><br/>
+            <div style={{display: "flex", flexWrap:"wrap", flexDirection:"row"}}>
+              <h4>Төрөл сонгох</h4>
+              <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
+                  <option value='{"name":"Ширээ", "number":"0"}'>Ширээ</option>
+                  <option value='{"name":"Сандал", "number":1}'>Сандал</option>
+                  <option value='{"name":"Тавиур", "number":2}'>Тавиур</option>
+            </select>
+            <h4 style={{marginLeft: "50px"}}>Брэнд сонгох</h4>
+              <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
+                  <option value='{"brand":"Alberta", "number":"0"}'>Alberta</option>
+                  <option value='{"brand":"Poltrona Frau - Renzo Frau", "number":1}'>Poltrona Frau - Renzo Frau</option>
+                  <option value='{"brand":"Misura Emme", "number":2}'>Misura Emme</option>
+            </select>
+            </div>
+            <div style={{display: "flex", flexWrap:"wrap", flexDirection:"row"}}>
+              <h4>Үйлдвэрлэх хугацаа</h4>
+                <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
+                    <option value='{"brand":""3-5"", "number":"0"}'>3-5 хоног</option>
+                    <option value='{"brand":"7", "number":1}'>7 хоног</option>
+                    <option value='{"brand":"10-15", "number":2}'>10-15 хоног</option>
+                </select>
+              <h4 style={{marginLeft: "50px"}}>Хүргэлт хийгдэх хугацаа</h4>
+                <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
+                    <option value='{"brand":"Alberta", "number":"0"}'>1</option>
+                    <option value='{"brand":"Poltrona Frau - Renzo Frau", "number":1}'>2</option>
+                    <option value='{"brand":"Misura Emme", "number":2}'>3</option>
+                    <option value='{"brand":"Misura Emme", "number":2}'>4</option>
+                    <option value='{"brand":"Misura Emme", "number":2}'>5</option>
+              </select>
+            </div>
+      
+          
+    
            <br/><br/>
            <input type="file" onChange={this.fileSelectedHandler} ></input>
            <br/><br/>

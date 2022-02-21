@@ -11,6 +11,14 @@ import { EditorState ,ContentState ,convertFromHTML,convertToRaw, CompositeDecor
 import './index.css';
 import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 import Spinner from '../Spinner/Spinner';
+import { widgetStories, bugs, website, server } from "variables/general.js";
+import GridItem from "components/Grid/GridItem.js";
+import Tasks from "components/Tasks/Tasks.js";
+import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import BugReport from "@material-ui/icons/BugReport";
+import Code from "@material-ui/icons/Code";
+import Cloud from "@material-ui/icons/Cloud";
+import CustomInput from "components/CustomInput/CustomInput.js"
 
 const styles = {
   root: {
@@ -97,7 +105,7 @@ function uploadImageCallBack1(file, info) {
 export default class EditorImage extends React.Component {
   constructor(props) {
     super(props);
-  this.state ={
+    this.state ={
     title:'',
     category:0,
     categoryName:"",
@@ -234,87 +242,122 @@ afterSubmission(e) {
   });
 }
 render() {
+
   var { isLoaded  }= this.state;
         if(isLoaded==true){
           return <Spinner/>
       }
+
+      
       else{
           return(
-    <div>
+    <div className='e-wrapper'>
         <form onSubmit={this.handleSubmit}>
             <h3> Барааны нэр </h3><br/>
-            <input type="text" onChange={this.handleTitleChange} name="title" value={this.state.title} /><br/><br/>
-            <input type="radio"  onChange={this.handleRadioChange} name="m" value="TRUE" />Бэлэн
-            <input type="radio" onChange={this.handleRadioChange}  name="m" value="FALSE" />Захиалга<br/><br/>
-            <div style={{display: "flex", flexWrap:"wrap", flexDirection:"row"}}>
-              <h4>Төрөл сонгох</h4>
-              <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
-                  <option value='{"name":"Ширээ", "number":"0"}'>Ширээ</option>
-                  <option value='{"name":"Сандал", "number":1}'>Сандал</option>
-                  <option value='{"name":"Тавиур", "number":2}'>Тавиур</option>
-            </select>
-            <h4 style={{marginLeft: "50px"}}>Брэнд сонгох</h4>
-              <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
-                  <option value='{"brand":"Alberta", "number":"0"}'>Alberta</option>
-                  <option value='{"brand":"Poltrona Frau - Renzo Frau", "number":1}'>Poltrona Frau - Renzo Frau</option>
-                  <option value='{"brand":"Misura Emme", "number":2}'>Misura Emme</option>
-            </select>
-            </div>
-            <div style={{display: "flex", flexWrap:"wrap", flexDirection:"row"}}>
-              <h4>Үйлдвэрлэх хугацаа</h4>
-                <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
-                    <option value='{"brand":""3-5"", "number":"0"}'>3-5 хоног</option>
-                    <option value='{"brand":"7", "number":1}'>7 хоног</option>
-                    <option value='{"brand":"10-15", "number":2}'>10-15 хоног</option>
-                </select>
-              <h4 style={{marginLeft: "50px"}}>Хүргэлт хийгдэх хугацаа</h4>
-                <select name="cate" onChange={this.handleCategoryChange} form="category" style={{width: "150px", height: "30px",marginLeft: "10px",marginTop: "10px"}}>
-                    <option value='{"brand":"Alberta", "number":"0"}'>1</option>
-                    <option value='{"brand":"Poltrona Frau - Renzo Frau", "number":1}'>2</option>
-                    <option value='{"brand":"Misura Emme", "number":2}'>3</option>
-                    <option value='{"brand":"Misura Emme", "number":2}'>4</option>
-                    <option value='{"brand":"Misura Emme", "number":2}'>5</option>
-              </select>
-            </div>
-      
-          
-    
-           <br/><br/>
-           <input type="file" onChange={this.fileSelectedHandler} ></input>
-           <br/><br/>
-       
-        <div style={styles.editor}>
-          <Editor
-            editorState={this.state.text}
-            toolbarClassName="toolbarClassName"
-            wrapperClassName="demo-wrapper"
-            editorClassName="demo-editor"
-            toolbarClassName="toolbar-class"
-            onEditorStateChange={this.onChange}
-            toolbar={{
-              inline: { inDropdown: true },
-              list: { inDropdown: true },
-              textAlign: {
-                inDropdown: true,
-                className: undefined,
-                component: undefined,
-                dropdownClassName: undefined,
-                options: ['justify','left', 'center', 'right' ],
-                justify: { icon: justify, className: undefined },
-                left: { icon: left, className: undefined },
-                center: { icon: center, className: undefined },
-                right: { icon: right, className: undefined },
-               
+                       <GridItem xs={12} sm={12} md={8}>
+          <CustomTabs
+            headerColor="info"
+            tabs={[
+              {
+                tabName: "Бэлэн",
+                tabIcon: Cloud,
+                tabTitle: "fff",
+                tabContent: (
+                  <div style={{display:'flex'}}>
+                    <div>
+                        <h4 className='type'>Төрөл &nbsp;
+                          <CustomInput/>
+                        </h4>
+                        <h4 className='type'>Брэнд&nbsp;
+                          <CustomInput/>
+                        </h4>
+                        <h4 className='type'>Хэмжээ&nbsp;
+                          <CustomInput/>
+                        </h4>
+                        <h4 className='type'>Материал&nbsp;
+                          <CustomInput/>
+                        </h4>
+                        <h4 className='type'>Үнэ&nbsp;
+                          <CustomInput/>
+                        </h4>
+                    </div>
+                    <div style={{marginLeft:'10vw'}}>
+                      <br/><br/>
+                       <h4>Зураг оруулах</h4>
+                      <input type="file" onChange={this.fileSelectedHandler} ></input>
+                      <br/><br/>
+                    </div>
+                  </div>
+                )
               },
-              link: { inDropdown: true },
-              history: { inDropdown: true },
-              image: { uploadCallback: uploadImageCallBack, alt: { present: true, mandatory: true } },
-            }}
-            />
-          
-        </div>
-        <br/>
-        <input type="submit" value="Publish"/>
+              {
+                tabName: "Захиалга",
+                tabIcon: Cloud,
+                tabTitle: "fff",
+                tabContent: (
+                  <div>
+                    <h4 className='type'>Төрөл &nbsp;
+                      <CustomInput/>
+                    </h4>
+                    <h3 className='type'>Материал сонголт &nbsp; </h3>
+                      <div class='type-grid'> 
+                        <span>  <h4 className='type'>Хавтан &nbsp;
+                          <CustomInput/>
+                          </h4>
+                        </span>
+                         <span>  <h4 className='type'>Чулуу &nbsp;
+                          <CustomInput/>
+                          </h4>
+                        </span>
+                         <span>  <h4 className='type'>Гэрэл &nbsp;
+                          <CustomInput/>
+                          </h4>
+                        </span>
+                         <span>  <h4 className='type'>Нугас &nbsp;
+                          <CustomInput/>
+                          </h4>
+                        </span>
+                      </div>
+                       <h3 className='type'>Захиалга хийгдэх хугацаа&nbsp; </h3>
+                        <div className='type-wrapper'>  
+                          <span>  <h5 className='type'>Хэмжээ авах &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                          <span>  <h5 className='type'>Захиалга өгөх &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                          <span>  <h5 className='type'>3D зураг гаргах &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                          <span>  <h5 className='type'>Үйлдвэрлэл &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                           <span>  <h5 className='type'>Суурилуулалт &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                           <span>  <h5 className='type'>Засвар үйлчилгээ &nbsp;
+                            <CustomInput/>&nbsp;&nbsp;
+                            </h5>
+                          </span>
+                        </div>
+                             <div>
+                              <br/><br/>
+                              <h4>Зураг оруулах</h4>
+                              <input type="file" onChange={this.fileSelectedHandler} ></input>
+                              <br/><br/>
+                            </div>
+                  </div>
+                )
+              },
+            ]}
+          />
+          <div><input style={{width:'10rem', height:"3rem"}} type="submit" value="Publish"/></div>
+        </GridItem>
         </form>
     </div>
     )

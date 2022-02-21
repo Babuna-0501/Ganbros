@@ -39,6 +39,9 @@ export default function RegularTables() {
   const ordersPage = () => {
       history.push("/admin/orders")
   }
+  const reqPage = () => {
+    history.push("/admin/request")
+  }
   return (
     <GridContainer>
       <GridItem xs={12}>
@@ -55,26 +58,26 @@ export default function RegularTables() {
               tableHead={["Name", "Email", "Утас"]}
               tableData={[
                 ["Батдорж", "batdorj@mail.com", "+976-99999999",  
-                  <Button on color="#eee" className={classes.marginRight} onClick={ordersPage}>
-                Захиалга харах 
+                  <Button on color="#eee" className={classes.marginRight} onClick={reqPage}>
+                Хүсэлт харах 
                 </Button>
                   ],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={reqPage}>
                   
-                Захиалга харах
+                Хүсэлт харах
               </Button>],
          
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
-                Захиалга харах
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" ,<Button color="#eee" className={classes.marginRight} onClick={reqPage}>
+                Хүсэлт харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999",<Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
-                Захиалга харах
+                ["Батдорж", "batdorj@mail.com", "+976-99999999",<Button color="#eee" className={classes.marginRight} onClick={reqPage}>
+                Хүсэлт харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999" , <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
-                Захиалга харах
+                ["Батдорж", "batdorj@mail.com", "+976-99999999" , <Button color="#eee" className={classes.marginRight} onClick={reqPage}>
+                Хүсэлт харах
               </Button>],
-                ["Батдорж", "batdorj@mail.com", "+976-99999999", <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
-                Захиалга харах
+                ["Батдорж", "batdorj@mail.com", "+976-99999999", <Button color="#eee" className={classes.marginRight} onClick={reqPage}>
+                Хүсэлт харах
               </Button>]
               ]}
               coloredColls={[3]}
@@ -98,24 +101,43 @@ export default function RegularTables() {
               hover
               tableHead={["ID", "Name", "E-mail", "Утас"]}
               tableData={[
-                ["1", "Батдорж", "batdorj@mail.com", "+976-99999999", <Status/> ],
-                ["2", "Батдорж", "batdorj@mail.com", "+976-99999999",  <Status/>],
-                ["3", "Батдорж", "batdorj@mail.com", "+976-99999999",  <Status/>],
+                ["1", "Батдорж", "batdorj@mail.com", "+976-99999999", 
+                <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+               Захиалга харах
+                </Button>],
+                ["2", "Батдорж", "batdorj@mail.com", "+976-99999999", 
+                <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                 Захиалга харах
+                </Button>
+                ],
+                ["3", "Батдорж", "batdorj@mail.com", "+976-99999999", 
+                <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                 Захиалга харах
+                </Button>],
                 [
                   "4",
                   "Батдорж",
                   "batdorj@mail.com",
                   "+976-99999999",
-                  ,  <Status/>
+                  ,     
+                  <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                 Захиалга харах
+                  </Button>
                 ],
                 [
                   "5",
                   "Батдорж",
                   "batdorj@mail.com",
                   "+976-99999999",
-                  ,  <Status/>
+                  ,     <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                       Захиалга харах
+                      </Button>
                 ],
-                ["6", "Батдорж", "batdorj@mail.com", "+976-99999999",  <Status/>]
+                ["6", "Батдорж", "batdorj@mail.com", "+976-99999999",  
+                  <Button color="#eee" className={classes.marginRight} onClick={ordersPage}>
+                 Захиалга харах
+                  </Button>
+                ]
               ]}
             />
           </CardBody>

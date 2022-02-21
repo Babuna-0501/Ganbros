@@ -77,6 +77,7 @@ export default function Snackbar(props) {
   );
 }
 
+
 Snackbar.defaultProps = {
   color: "info"
 };

@@ -293,7 +293,7 @@ var dashRoutes = [
         layout: "/admin"
       },
       {
-        path: "/orders",
+        path: "/request",
         name: "",
         rtlName: "جداول ممتدة",
         mini: "",
@@ -301,15 +301,15 @@ var dashRoutes = [
         component: ExtendedTables,
         layout: "/admin"
       },
-      // {
-      //   path: "/react-tables",
-      //   name: "React Tables",
-      //   rtlName: "رد فعل الطاولة",
-      //   mini: "RT",
-      //   rtlMini: "در",
-      //   component: ReactTables,
-      //   layout: "/admin"
-      // }
+      {
+        path: "/orders",
+        name: "",
+        rtlName: "رد فعل الطاولة",
+        mini: "",
+        rtlMini: "در",
+        component: ReactTables,
+        layout: "/admin"
+      }
     ]
   },
   // {
@@ -348,14 +348,14 @@ var dashRoutes = [
   //     }
   //   ]
   // },
-  // {
-  //   path: "/widgets",
-  //   name: "Widgets",
-  //   rtlName: "الحاجيات",
-  //   icon: WidgetsIcon,
-  //   component: Widgets,
-  //   layout: "/admin"
-  // },
+  {
+    path: "/widgets",
+    name: "Widgets",
+    rtlName: "الحاجيات",
+    icon: WidgetsIcon,
+    component: Widgets,
+    layout: "/admin"
+  },
   // {
   //   path: "/charts",
   //   name: "Charts",
@@ -364,13 +364,13 @@ var dashRoutes = [
   //   component: Charts,
   //   layout: "/admin"
   // },
-  {
-    path: "/calendar",
-    name: "Calendar",
-    rtlName: "التقويم",
-    icon: DateRange,
-    component: Calendar,
-    layout: "/admin"
-  }
+  // {
+  //   path: "/calendar",
+  //   name: "Calendar",
+  //   rtlName: "التقويم",
+  //   icon: DateRange,
+  //   component: Calendar,
+  //   layout: "/admin"
+  // }
 ];
 export default dashRoutes;

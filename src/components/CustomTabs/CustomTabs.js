@@ -87,6 +87,7 @@ CustomTabs.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       tabName: PropTypes.string.isRequired,
+      tabTitle: PropTypes.string.isRequired,
       tabIcon: PropTypes.object,
       tabContent: PropTypes.node.isRequired
     })

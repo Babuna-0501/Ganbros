@@ -1,8 +1,9 @@
 import React from "react";
+
+import Percent from 'components/Percent/Percent';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import Checkbox from "@material-ui/core/Checkbox";
-import MenuItem from "@material-ui/core/MenuItem";
+import Datetime from "react-datetime";
 // material-ui icons
 import Assignment from "@material-ui/icons/Assignment";
 import Person from "@material-ui/icons/Person";
@@ -27,6 +28,7 @@ import CardIcon from "components/Card/CardIcon.js";
 import CardHeader from "components/Card/CardHeader.js";
 import Flow from "components/Flow/Flow.js";
 import styles from "assets/jss/material-dashboard-pro-react/views/extendedTablesStyle.js";
+import LibraryBooks from "@material-ui/icons/LibraryBooks";
 
 import product1 from "assets/img/or1.jpeg";
 import product2 from "assets/img/sandal1.jpeg";
@@ -108,8 +110,7 @@ export default function ExtendedTables() {
                 "PRODUCT",
                 "BRAND",
                 "Desc",
-                "PRICE",
-                "QTY",
+                "Date",
                 "AMOUNT",
                 ""
               ]}
@@ -127,19 +128,24 @@ export default function ExtendedTables() {
                   "Alberta",
                   <Flow/>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 3.500.000
+                        <CardBody style={{marginTop:"-5px"}}>
+                          <FormControl fullWidth>
+                            <Datetime
+                              timeFormat={false}
+                              inputProps={{ placeholder: "Сонгох" }}
+                            />
+                          </FormControl>
+                        </CardBody>
                   </span>,
                   <span key="key">
-                    1{` `}
-                    <div className={classes.buttonGroup}>
-                    </div>
+                    <Percent/>
                   </span>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 3.500.000
-                  </span>,
-                  <Button simple className={classes.actionButton} key="key">
-                    <Close className={classes.icon} />
-                  </Button>
+                        <Button color="info" round>
+                          Зөвшөөрөх{" "}
+                          <KeyboardArrowRight className={classes.icon} />
+                        </Button>
+                  </span>
                 ],
                 [
                   <div className={classes.imgContainer} key="key">
@@ -154,15 +160,23 @@ export default function ExtendedTables() {
                   "Poltrona Frau Style & Design Centre",
                   <Flow/>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 1.200.000
+                      <CardBody style={{marginTop:"-5px"}}>
+                          <FormControl fullWidth>
+                            <Datetime
+                              timeFormat={false}
+                              inputProps={{ placeholder: "Сонгох" }}
+                            />
+                          </FormControl>
+                        </CardBody>
                   </span>,
                   <span key="key">
-                    2{` `}
-                    <div className={classes.buttonGroup}>
-                    </div>
+                    <Percent/>
                   </span>,
-                  <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 2.400.000
+                          <span key="key">
+                        <Button color="info" round>
+                          Зөвшөөрөх{" "}
+                          <KeyboardArrowRight className={classes.icon} />
+                        </Button>
                   </span>,
                   <Button simple className={classes.actionButton} key="key">
                     <Close className={classes.icon} />
@@ -181,42 +195,28 @@ export default function ExtendedTables() {
                   "Poltrona Frau - Jean-Marie Massaud",
                   <Flow/>,
                   <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 2.100.000
+                    <CardBody style={{marginTop:"-5px"}}>
+                          <FormControl fullWidth>
+                            <Datetime
+                              timeFormat={false}
+                              inputProps={{ placeholder: "Сонгох" }}
+                            />
+                          </FormControl>
+                        </CardBody>
                   </span>,
                   <span key="key">
-                    1{` `}
-                    <div className={classes.buttonGroup}>
-                    </div>
+                    <Percent/>
                   </span>,
-                  <span key="key">
-                    <small className={classes.tdNumberSmall}>₮</small> 2.100.000
-                  </span>,
+                          <span key="key">
+                          <Button color="info" round>
+                            Зөвшөөрөх{" "}
+                            <KeyboardArrowRight className={classes.icon} />
+                          </Button>
+                    </span>,
                   <Button simple className={classes.actionButton} key="key">
                     <Close className={classes.icon} />
                   </Button>
                 ],
-                {
-                  total: true,
-                  colspan: "5",
-                  amount: (
-                    <span key="key">
-                      <small>₮</small>7.000.000
-                    </span>
-                  )
-                },
-                {
-                  purchase: true,
-                  colspan: "4",
-                  col: {
-                    colspan: 6,
-                    text: (
-                      <Button color="info" round>
-                        Зөвшөөрөх{" "}
-                        <KeyboardArrowRight className={classes.icon} />
-                      </Button>
-                    )
-                  }
-                }
               ]}
               tableShopping
               customHeadCellClasses={[

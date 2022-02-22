@@ -43,14 +43,14 @@ import EditorImage from "components/Editor/editor";
 import { FiEdit } from "react-icons/fi";
 
 var dashRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    rtlName: "لوحة القيادة",
-    icon: DashboardIcon,
-    component: Dashboard,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/dashboard",
+  //   name: "Dashboard",
+  //   rtlName: "لوحة القيادة",
+  //   icon: DashboardIcon,
+  //   component: Dashboard,
+  //   layout: "/admin"
+  // },
   {
     path: "/editor",
     name: "Бараа оруулах",
@@ -348,14 +348,14 @@ var dashRoutes = [
   //     }
   //   ]
   // },
-  {
-    path: "/widgets",
-    name: "Widgets",
-    rtlName: "الحاجيات",
-    icon: WidgetsIcon,
-    component: Widgets,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/widgets",
+  //   name: "Widgets",
+  //   rtlName: "الحاجيات",
+  //   icon: WidgetsIcon,
+  //   component: Widgets,
+  //   layout: "/admin"
+  // },
   // {
   //   path: "/charts",
   //   name: "Charts",
